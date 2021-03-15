@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <title>curriculum Vitae</title>
+</head>
+
+<body>
+  <header>
+    <h1 class="titulo bg-primary">Curriculum Vitae</h1>
+  </header>
+  <div class="pagina">
+    <nav class="primary-nav bg-secondary color-invert-secondary">
+      <ul class="menu bg-highlight">
+        <li class="menu__opcion">
+          <p class="menu__cabecera"><a href="#datos">Datos particulares</a>
+        </li>
+        <li class="menu__opcion">
+          <p class="menu__cabecera"><a href="#experiencia">Experiencia Laboral</a></p>
+          <ul class="submenu">
+            <li class="submenu__opcion"><a href="#calvia">Ajuntament de Calvià</a></li>
+            <li class="submenu__opcion"><a href="#uib">Universitat de les Illes Balears</a></li>
+          </ul>
+        </li>
+        <li class="menu__opcion">
+          <p class="menu__cabecera"><a href="#formacion">Formación</a></p>
+        </li>
+      </ul>
+    </nav>
+    <main class="principal">
+      <section>
+        <h2 id="datos" class="subtitulo">Datos particulares</h2>
+        <div class="empleado">
+        <img class="empleado__foto" alt="Foto Alumno" src="assets/images/foto.png">
+        <div class="empleado__datos-personales">
+          <p class="empleado__resumen">Ingeniero Informático con más de 20 años de experiencia profesional en proyectos
+            informáticos</p>
+          <p><span class="empleado__atributo"><span class="fas fa-address-card"></span>DNI</span>43074370Q</p>
+          <p><span class="empleado__atributo"><span class="fas fa-user-circle"></span>Nombre</span>Pedro Ignacio Tous Durán</p>
+          <p><span class="empleado__atributo"><span class="fas fa-calendar-alt"></span>Fecha Nacimiento</span><time datetime="1970-09-18">18/09/1970</time></p>
+          <p><span class="empleado__atributo"><span class="fas fa-university"></span>Titulación</span>Licenciado en informática por la UIB</p>
+          <p><span class="empleado__atributo"><span class="fas fa-phone"></span>Teléfono</span>666 888 888</p>
+          <p><span class="empleado__atributo"><span class="fas fa-at"></span>Email</span>ptousd@uoc.edu</p>
+          <p><span class="empleado__atributo"><span class="fas fa-house-user"></span>Dirección Actual</span>Mi Casa, Mallorca</p>
+        </div>
+        </div>
+      </section>
+      <hr class="separador">
+      <section class="curriculum">
+        <h2 id="experiencia" class="subtitulo">Experiencia laboral</h2>
+        <div class="empresa">
+          <h3 id="calvia" class="subtitulo2">Ajuntament de Calvià</h3>
+          <div class="empresa__info">
+            <img class="empresa__icono" src="assets/images/calvia.jpg" alt="Icono Ayuntamiento Calvià">
+            <div class="empresa__datos">
+              <p><span class="fas fa-phone"></span>971139100</p>
+              <p><span class="fas fa-building"></span>C/ Bujosa Sans Batle 07183 Illes Balears</p>
+          </div>
+          </div>
+          <div class="empresa__puestos">
+            <h3 class="subtitulo3">Puestos de trabajo</h3>
+            <ul class="lista-dos-elementos">
+              <li class="lista-dos-elementos__fila dotted">
+                <div class="lista-dos-elementos__columna1">Ingeniero informática (A1)</div>
+                <div class="lista-dos-elementos__columna2">Desde el 04/10/2019</div>
+              </li>
+              <li class="lista-dos-elementos__fila dotted">
+                <div class="lista-dos-elementos__columna1">Técnico de desarrollo informático (A2)</div>
+                <div class="lista-dos-elementos__columna2">16/12/2013 - 03/10/2019</div>
+              </li>
+              <li class="lista-dos-elementos__fila dotted">
+                <div class="lista-dos-elementos__columna1">Analista programador (Grupo A2)</div>
+                <div class="lista-dos-elementos__columna2">19/07/2007 - 15/12/2013</div>
+              </li>
+              <li class="lista-dos-elementos__fila dotted">
+                <div class="lista-dos-elementos__columna1">Analista programador (Grupo C1)</div>
+                <div class="lista-dos-elementos__columna2">01/07/2005 - 18/07/2007</div>
+              </li>
+              <li class="lista-dos-elementos__fila dotted">
+                <div class="lista-dos-elementos__columna1">Programador Informático (Grupo C1)</div>
+                <div class="lista-dos-elementos__columna2">05/08/1996 - 30/06/2005</div>
+              </li>
+            </ul>
+          </div>
+          <div class="empresa__funciones">
+            <h3 class="subtitulo3">Funciones realizas</h3>
+            <ul class="lista-simple">
+              <li class="lista-simple__fila">Implantación de las utilidades de firma electrónica de la Intranet
+              </li>
+              <li class="lista-simple__fila">Desarrollo del módulo para el uso de Códigos seguros de
+                verificación
+                (CSV)</li>
+              <li class="lista-simple__fila">Colaboración activa con el equipo de implantación de la
+                administración electrónica</li>
+              <li class="lista-simple__fila">Diseño e implementación del módulo forms (sistema para agilizar la
+                puesta en marcha de trámites online, con pagos por
+                TPV e identificación con certificados digitales)</li>
+              <li class="lista-simple__fila">
+                <p>Evaluación de software externo e integración de los productos seleccionados con nuestros sistemas
+                </p>
+                <p class="resaltado">Ejemplos</p>
+                <ul class="sublista-simple">
+                  <li class="sublista-simple__fila">Herramienta integra de firma XADES del ministerio de
+                    hacienda
+                  </li>
+                  <li class="sublista-simple__fila">Herramienta ginside para la generación de documentos
+                    electrónicos en formato ENI</li>
+                  <li class="sublista-simple__fila">Sistema PINBAL de la DGTIC que permite compartir datos entre
+                    administraciones</li>
+                  <li class="sublista-simple__fila">Gestor documental alfresco</li>
+                  <li class="sublista-simple__fila">Gestor de proyectos Onlyoffice</li>
+                </ul>
+              </li>
+              <li class="lista-simple__fila">Análisis, desarrollo y mantenimiento de las siguientes aplicaciones
+              <ul class="sublista-simple">
+                <li class="sublista-simple__fila">Área de servicios económicos: Plusvalias, IVTM y Comercios
+                </li>
+                <li class="sublista-simple__fila">Área de contratación: Gestión de expedientes de contratación
+                </li>
+                <li class="sublista-simple__fila">Área del SAC: Gestión del padrón municipal de habitantes</li>
+                <li class="sublista-simple__fila">Área de mantenimiento: Gestión de Ots y Control de Stocks de
+                  Almacén</li>
+                <li class="sublista-simple__fila">Área de Deportes: Gestión de polideportivos</li>
+                <li class="sublista-simple__fila">Área de Sanciones e Infracciones: Gestión de expedientes sancionadores</li>
+              </ul>
+              </li>
+              <li class="lista-simple__fila">Instalación, gestión y mantenimiento de servidores con sistema
+                operativo linux
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="empresa">
+          <h3 id="uib" class="subtitulo2">Universiat de les Illes Balears</h3>
+          <div class="empresa__info">
+            <img class="empresa__icono" src="assets/images/Logo-UIB-21.jpg" alt="Icono UIB">
+            <div class="empresa__datos">
+            <p><span class="fas fa-phone"></span>971 173 000</p>
+            <p><span class="fas fa-university"></span>Carretera de Valldemossa, km 7.5, 07122 Palma, Illes Balears</p>
+            </div>
+          </div>
+          <div class="empresa__puestos">
+            <h4 class="subtitulo3">Puestos de trabajo</h4>
+            <ul class="lista-dos-elementos">
+              <li class="lista-dos-elementos__fila">
+                <div class="lista-dos-elementos__columna1">Profesor Asociado</div>
+                <div class="lista-dos-elementos__columna2">01/10/2000 - 30/09/2007</div>
+              </li>
+            </ul>
+          </div>
+          <div class="empresa__funciones">
+            <h4 class="subtitulo3">Cursos impartidos</h4>
+            <ul class="lista-tres-elementos">
+              <li class="lista-tres-elementos__fila">
+                <div>Informática Aplicada</div>
+                <div>Licenciatura Administración Empresas</div>
+                <div>2000 - 2005</div>
+              </li>
+              <li class="lista-tres-elementos__fila">
+                <div>Herramientas informáticas y matemáticas</div>
+                <div>Licenciatura Matemáticas</div>
+                <div>2001 - 2002</div>
+              </li>
+              <li class="lista-tres-elementos__fila">
+                <div>Ampliación de Programación Orientada a Objetos</div>
+                <div>Ingeniería Técnica Informática</div>
+                <div>2003 - 2007</div>
+              </li>
+              <li class="lista-tres-elementos__fila">
+                <div>Sistemas Operativos</div>
+                <div>Ingeniería Técnica Informática</div>
+                <div>2005 - 2007</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="separador">
+        <div class="formacion">
+          <h2 id="formacion" class="subtitulo">Formación</h2>
+          <ul class="lista-dos-elementos">
+            <li class="lista-dos-elementos__fila dotted">
+              <div class="lista-dos-elementos__columna1">Dirección estratégica y gestión operativa de las TI</div>
+              <div class="lista-dos-elementos__columna2">90h</div>
+            </li>
+            <li class="lista-dos-elementos__fila dotted">
+              <div class="lista-dos-elementos__columna1">Ingeniería de software avanzada</div>
+              <div class="lista-dos-elementos__columna2">300h</div>
+            </li>
+            <li class="lista-dos-elementos__fila dotted">
+              <div class="lista-dos-elementos__columna1">Gestión de equipos</div>
+              <div class="lista-dos-elementos__columna2">21h</div>
+            </li>
+            <li class="lista-dos-elementos__fila dotted">
+              <div class="lista-dos-elementos__columna1">Planificación y gestión de proyectos en la administración pública</div>
+              <div class="lista-dos-elementos__columna2">25h</div>
+            </li>
+            <li class="lista-dos-elementos__fila dotted">
+              <div class="lista-dos-elementos__columna1">Introducción a los frameworks Java</div>
+              <div class="lista-dos-elementos__columna2">25h</div>
+            </li>
+            <li class="lista-dos-elementos__fila dotted">
+              <div class="lista-dos-elementos__columna1">Enterprise JavaBeans</div>
+              <div class="lista-dos-elementos__columna2">20h</div>
+            </li>
+            <li class="lista-dos-elementos__fila dotted">
+              <div class="lista-dos-elementos__columna1">Administración de servidores basados en el Sistema Operativo Linux</div>
+              <div class="lista-dos-elementos__columna2">40h</div>
+            </li>
+            <li class="lista-dos-elementos__fila dotted">
+              <div class="lista-dos-elementos__columna1">Apcahe + Tomcat</div>
+              <div class="lista-dos-elementos__columna2">20h</div>
+            </li>
+            <li class="lista-dos-elementos__fila dotted">
+              <div class="lista-dos-elementos__columna1">Análisi y Diseño Orientado a Objetos</div>
+              <div class="lista-dos-elementos__columna2">20h</div>
+            </li>
+            <li class="lista-dos-elementos__fila dotted">
+              <div class="lista-dos-elementos__columna1">Introducción a la programación orientada a objetos con java</div>
+              <div class="lista-dos-elementos__columna2">30h</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer class="pie-pagina bg-primary">
+    <p>2021 © Pedro Tous Durán</p>
+  </footer>
+<script src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+</html>

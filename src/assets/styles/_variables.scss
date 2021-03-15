@@ -1,0 +1,13 @@
+@use "sass:color";
+@use "sass:string";
+
+$font-family-montserrat: 'Montserrat', serif;
+
+$primary-color: #576d7b;
+$secondary-color:#17a095;
+$bg-color: #fff;
+$bg-primary-color: color.scale($primary-color, $lightness: 70%);
+$bg-secondary-color: color.scale($secondary-color, $lightness: 50%);
+$invert-secondary-color: color.invert($bg-secondary-color);
+
+$menu-option-size: #{string.length("Universitat de les Illes Balears") - 12} + rem;

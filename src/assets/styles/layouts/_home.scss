@@ -1,0 +1,428 @@
+/*------------------------------------*\
+  #REGLAS BASE
+\*------------------------------------*/
+
+body {
+  font-family: $font-family-montserrat;
+  color: $primary-color;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: inherit;
+}
+
+
+
+
+/*------------------------------------*\
+  #REGLAS LAYOUT
+\*------------------------------------*/
+
+/**
+ * La classe página delimita el bloque comprendido por el menú de navegación 
+ * más la información curricular
+ * 1. Para pantallas pequeñas los diferentes componentes de la página se 
+ *    mostrarán en block con un pequeño padding lateral
+ *
+ * 2. A partir de tamaño tablet el menú de navegación se coloca a la izquierda
+ *     utilizando un grid de dos columnas
+ *
+ * 3. El tamaño de la columna izquierda se ajusta al tamaño de la opicón con el
+ *    texto más largo con una función Sass
+ *
+ */
+
+.pagina {
+  padding: 0 .3rem; /* [1] */
+}
+
+@media only screen and (min-width: 768px) {
+  .pagina {
+    display: grid; /* [2] */
+    grid-template-columns: $menu-option-size auto; /* [3] */
+    padding-right: 3rem;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .pagina {
+    padding-right: 5rem;
+  }
+}
+
+/**
+ * La classe primary-nav define las propiedades del layout de navegación
+ *
+ * Los margins i paddings se ajustan según el tamaño de pantalla 
+ *
+ */
+
+.primary-nav {
+  padding: .5rem 0;
+  margin: 1rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .primary-nav {
+    padding: 0 1rem;
+    margin: 0;
+ }
+}
+
+/**
+ * La classe principal define las propiedades del layout main
+ *
+ * Los margins i paddings se ajustan según el tamaño de pantalla 
+ *
+ */
+
+.principal {
+  margin: 2rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .principal {
+    margin: 2rem 1rem;
+  }
+}
+
+/**
+ * La classe pie-pagina define las propiedades del layout footer
+ *
+ */
+
+.pie-pagina {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+
+
+
+
+/*------------------------------------*\
+  #REGLAS MODULOS
+\*------------------------------------*/
+
+.separador {
+  width: 100%;
+  border-top: 8px solid $secondary-color;
+  border-radius: 10rem;
+}
+
+
+/*------------------------------------*\
+  REGLAS MODULOS - TÍTULOS
+\*------------------------------------*/
+
+.titulo {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.subtitulo {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  margin: 0;
+  font-size: 1.8rem;
+  color: $invert-secondary-color;
+}
+
+.subtitulo2 {
+  padding-bottom: 1rem;
+  font-size: 1.6rem;
+  border-bottom: 1px solid $secondary-color;
+}
+
+.subtitulo3 {
+  padding: 0;
+  margin-top: 1rem;
+  margin-bottom: .3rem;
+  font-size: 1.2rem;
+}
+
+
+/*------------------------------------*\
+  REGLAS MODULOS - MENÚS NAVEGACIÓN
+\*------------------------------------*/
+
+/**
+ * La classe menú se utiliza para dar formato al bloques de menú de navegación
+ *
+ * 1. Para pantallas de tamaño mediano - grande, al estar colocado a la 
+ *    izquierda del contenido, se extiende hasta el pie de página 
+ *
+ */
+
+.menu {
+  padding-left: .2rem;
+  margin-left: 0;
+  font-size: 1rem;
+  list-style: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu {
+    height: 100%; /* [1] */
+  }
+}
+
+.menu__opcion {
+  margin: .5rem auto;
+}
+
+.menu__cabecera {
+  margin: .3rem;
+  font-weight: bolder;
+}
+
+.submenu {
+  list-style: square;
+}
+
+.submenu__opcion {
+  margin: .7rem auto;
+}
+
+
+/*------------------------------------*\
+  REGLAS MODULOS - LISTAS
+\*------------------------------------*/
+
+/**
+ * La classe lista-dos-elementos define un bloque que contienen listas de dos 
+ * components
+ * EL bloque puede contener elelemtos que son filas y las filas contienen dos 
+ * columnas 
+ *
+ * Para pantallas pequeñas las columnas se muestran en block
+ * 1. Para pantallas tipo tablet en un grid de dos columnas
+ * 2. Para pantallas grandes en flex
+ * 3. La classe dotted junto a la clase .lista-dos-elementos__fila se modifica
+ *    el comportamiento de las columnas para poder ver bién el punteado
+ */
+
+.lista-dos-elementos {
+  list-style: none;
+}
+
+@media only screen and (min-width: 1224px) {
+  .lista-dos-elementos {
+    margin-right: 20%;
+  }
+}
+
+.lista-dos-elementos__fila {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .lista-dos-elementos__fila {
+    display: grid; /*[1]*/
+    grid-template-columns: .6fr .4fr;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .lista-dos-elementos__fila {
+    display: flex; /*[2]*/
+    flex-direction: row;
+    justify-content: space-between;
+
+      .lista-dos-elementos__columna1 {
+        padding-right: 1rem;
+      }
+
+      .lista-dos-elementos__columna2 {
+        padding-left: 1rem;
+      }
+
+  }
+
+  .dotted { /*[3]*/
+    .lista-dos-elementos__columna1,
+    .lista-dos-elementos__columna2 {
+      margin-bottom: -.5rem;
+      background-color: $bg-color;
+    }
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .dotted {
+    margin-bottom: 1rem;
+    background: url(../images/dot.png) 0 bottom repeat-x;
+  }
+}
+
+/**
+ * La clases lista-simple y sublista-simple definen bloques que contienen 
+ * listas simples y sus posibles sublistas 
+ * No se usan en nested ya que se considera que el bloque sublista se debería
+ * poder usar independientemente de estar en una lista
+ */
+
+.lista-simple {
+  list-style: square;
+
+  .lista-simple__fila {
+    margin-top: .7rem;
+    margin-bottom: .7rem;
+  }
+
+}
+
+.sublista-simple {
+  list-style: disc;
+
+  .sublista-simple__fila {
+    margin-top: .7rem;
+    margin-bottom: .7rem;
+  }
+
+}
+
+/**
+ * La classe lista-tres-elementos define un bloque que contienen listas de tres 
+ * components
+ * EL bloque puede contener elelemtos que son filas y las filas contienen tres 
+ * columnas 
+ *
+ * Para pantallas pequeñas y tablets las columnas se muestran en block
+ * 1. Para pantallas grandes en un grid de tres columnas
+ *
+ */
+
+.lista-tres-elementos {
+  list-style: none;
+
+  .lista-tres-elementos__fila {
+    margin-bottom: 1.5rem;
+  }
+
+}
+
+@media only screen and (min-width: 1224px) {
+  .lista-tres-elementos {
+    margin-right: 20%;
+
+    .lista-tres-elementos__fila {
+      display: grid;
+      grid-template-columns: 40fr 40fr 20fr; /*[1]*/
+      grid-column-gap: 1rem;
+    }
+
+  }
+}
+
+
+/*------------------------------------*\
+  REGLAS MODULOS - OBJETOS
+\*------------------------------------*/
+
+/**
+ * La classe empleado se utiliza para abstraer el diseño de bloques que 
+ * contienen los datos de un empleado
+ * El bloque principal de divide en una foto y los datos personales
+ * En pantallas pequeñas y tables se muestran en block
+ *
+ * 1. En pantallas grandes se utiliza un flex por columnas
+ *
+ */
+
+@media only screen and (min-width: 1224px) {
+  .empleado {
+    display: flex; /*[1]*/
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.empleado__foto {
+  width: 100px;
+}
+
+@media only screen and (min-width: 768px) {
+  .empleado__foto {
+    width: 125px;
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .empleado__foto {
+    width: 150px;
+  }
+}
+
+.empleado__atributo {
+  display: block;
+  font-weight: bolder;
+}
+
+@media only screen and (min-width: 1224px) {
+  .empleado__atributo {
+    display: inline;
+  }
+
+  .empleado__atributo::after {
+    content: ": ";
+  }
+}
+
+/**
+ * La classe empleado se utiliza para abstraer el diseño de bloques que 
+ * contienen los datos de un empleado
+ * El bloque principal de divide en el logo y los datos de contacto de la empresa
+ *
+ */
+
+.empresa__info {
+  display: grid;
+  grid-template-columns: 100px auto;
+  align-items: flex-start;
+}
+
+.empresa__icono {
+  width: 150px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.empresa__datos {
+  padding-left: 3rem;
+}
+
+
+/*------------------------------------*\
+  #REGLAS TEMAS
+\*------------------------------------*/
+
+.bg-primary {
+  background-color: $bg-primary-color;
+}
+
+.bg-secondary {
+  background-color: $bg-secondary-color;
+}
+
+.color-invert-secondary {
+  color: $invert-secondary-color;
+}
+
+.resaltado {
+  font-weight: bolder;
+}
+
+.fas {
+  margin-right: .5rem;
+}
+
